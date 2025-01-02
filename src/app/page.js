@@ -7,7 +7,7 @@ export default function Home() {
         <Image
           className="dark:invert"
           src="/cityrail.svg"
-          alt="City Road by TBA logo"
+          alt="City Road logo"
           width={180}
           height={38}
           priority
