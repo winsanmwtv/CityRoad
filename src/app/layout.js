@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "CityRail",
+  title: "CityRoad",
   description: "A solution for community to update real-time transport status.",
 };
 
