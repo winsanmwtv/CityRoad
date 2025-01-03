@@ -1,4 +1,3 @@
-import warningLogo from "./warning.png";
 import Image from "next/image";
 
 export default function commonAlert() {
@@ -11,7 +10,7 @@ export default function commonAlert() {
                 <div className="mr-4 mt-2 -mb-2">
                     <Image
                         className=""
-                        src={warningLogo}
+                        src="/warning.png"
                         alt="Alert Icon"
                         width={50}
                         height={50}

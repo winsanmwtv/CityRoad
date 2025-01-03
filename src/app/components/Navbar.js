@@ -1,16 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import ContentWidth from "./contentWidth";
-import cityRailLogo from "./cityrail.svg";
 
 export default function Navbar() {
     return (
-        <nav className="bg-primary fixed w-full">
+        <nav className="bg-primary fixed w-full z-50"> {/* Added z-50 */}
             <ContentWidth>
                 <Link href="/" title="Home Page">
                     <Image
                         className="invert"
-                        src={cityRailLogo}
+                        src="/cityrail.svg"
                         alt="CityRoad Logo"
                         width={100}
                         height={100}
