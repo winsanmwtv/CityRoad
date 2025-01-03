@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 900 600" style="enable-background:new 0 0 900 600;" xml:space="preserve">
+	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#231F20;stroke-width:51.0564;stroke-linecap:round;stroke-linejoin:round;}
-	.st1{fill:none;stroke:#231F20;stroke-width:51.0564;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#231F20;stroke-width:115.0164;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#231F20;stroke-width:115.0164;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st2{fill:#231F20;}
 	.st3{font-family:'Arial';}
-	.st4{font-size:114.9012px;}
+	.st4{font-size:258.8416px;}
 </style>
 <g>
 	<g>
-		<path class="st0" d="M148.67,336.17V187.81c0-21.03,17.29-38.07,38.61-38.07h99.33c21.33,0,38.61,17.05,38.61,38.07v0
-			c0,21.03-17.29,38.07-38.61,38.07H148.67"/>
+		<path class="st0" d="M290.93,787.52V453.31c0-47.37,38.95-85.76,86.98-85.76h223.76c48.05,0,86.98,38.41,86.98,85.76l0,0
+			c0,47.37-38.95,85.76-86.98,85.76H290.93"/>
 	</g>
 	<g>
-		<path class="st0" d="M217.3,225.88h-86.99c-41.94,0-75.94-33.52-75.94-74.88v0c0-41.35,34-74.88,75.94-74.88h86.99"/>
+		<path class="st0" d="M445.54,539.07H249.57c-94.48,0-171.07-75.51-171.07-168.68l0,0c0-93.15,76.59-168.68,171.07-168.68h195.97"
+			/>
 	</g>
-	<path class="st1" d="M148.67,225.88"/>
+	<path class="st1" d="M290.93,539.07"/>
 	<g>
-		<line class="st0" x1="148.67" y1="225.88" x2="325.22" y2="336.17"/>
+		<line class="st0" x1="290.93" y1="539.07" x2="688.65" y2="787.52"/>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 383.9556 350.0452)" class="st2 st3 st4">CityRoad</text>
+<text transform="matrix(1 0 0 1 820.968 818.7803)" class="st2 st3 st4">CityRoad</text>
 </svg>
