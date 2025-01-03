@@ -1,56 +1,50 @@
-"use client";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Mitr } from "next/font/google"; // Import Mitr font
+import "./globals.css";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
+import CommonAlert from "@/app/components/commonAlert";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
+// Importing fonts
+const geistSans = Geist({
+    variable: "--font-geist-sans",
+    subsets: ["latin"],
+});
 
-export default function CommonAlert() {
-    // Array of alert texts
-    const alertText = [
-        "เว็บไซต์ของเราอยู่ระหว่างการพัฒนา อาจจะมีบางสิ่งที่ยังไม่ทำงาน ขออภัยในความไม่สะดวก",
-        "รถไฟฟ้ามหานคร สายสีส้ม คาดว่าจะเปิดให้บริการช่วงปี 2070"
-    ];
+const geistMono = Geist_Mono({
+    variable: "--font-geist-mono",
+    subsets: ["latin"],
+});
 
-    // State for the current alert index
-    const [currentAlert, setCurrentAlert] = useState(0);
+// Import Mitr font with specified weight
+const mitr = Mitr({
+    variable: "--font-mitr",
+    subsets: ["latin", "thai"],
+    weight: "400", // You can change this to another weight like "300", "500", etc. if needed
+});
 
-    // Effect to cycle through alerts every 10 seconds
-    useEffect(() => {
-        if (alertText.length > 1) {
-            const interval = setInterval(() => {
-                setCurrentAlert((prev) => (prev + 1) % alertText.length);
-            }, 10000); // 10 seconds
-            return () => clearInterval(interval); // Cleanup on component unmount
-        }
-    }, [alertText.length]);
+export const metadata = {
+    title: "CityRoad",
+    description: "A solution for the community to update real-time transport status.",
+    author: "Phongsiri Loedphongthai",
+};
 
-    // Return null if no alert texts exist
-    if (alertText.length === 0) {
-        return null;
-    }
-
+export default function RootLayout({ children }) {
     return (
-        <div className="bg-warning text-warning-content p-4 flex flex-row sm:flex-row sm:items-center justify-start">
-            {/* Alert Icon (Stay on left side of text on both mobile and desktop) */}
-            <div className="mr-4 mt-0 mb-3 sm:mb-0 sm:mr-4">
-                <Image
-                    src="/warning.png"
-                    alt="Alert Icon"
-                    width={24} // Adjusted size for mobile
-                    height={24} // Adjusted size for mobile
-                    className="w-6 h-6 sm:w-8 sm:h-8" // Smaller on mobile, larger on desktop
-                />
-            </div>
-            {/* Alert Text (Text should stay to the right of logo) */}
-            <div className="flex flex-col items-start sm:items-start sm:text-left w-full">
-                <div className="mt-1">
-                    <h3 className="text-sm sm:text-lg mb-1 text-right sm:text-left"> {/* Right-align text on mobile */}
-                        ข่าวล่าสุด: {alertText[currentAlert]}{" "}
-                        <span className="text-xs sm:text-sm text-gray-700 ml-3">
-                            [{currentAlert + 1}/{alertText.length}]
-                        </span>
-                    </h3>
+        <>
+            {/* Manually define <html> and <body> */}
+            <html lang="th">
+            <body className={`${geistSans.variable} ${geistMono.variable} ${mitr.variable} antialiased`}>
+            <div className="flex flex-col min-h-screen">
+                <Navbar />
+                <CommonAlert />
+                <div className="flex-grow pt-0"> {/* Ensure no overlap between navbar and content */}
+                    <main>{children}</main>
                 </div>
+                <Footer />
             </div>
-        </div>
+            </body>
+            </html>
+        </>
     );
 }
