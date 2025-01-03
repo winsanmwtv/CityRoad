@@ -4,6 +4,6 @@ import Status from './status';
 
 export default function Home() {
     return (
-            <Status/>
+        <Status/>
     );
 }

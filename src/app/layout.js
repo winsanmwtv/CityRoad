@@ -36,12 +36,12 @@ export default function RootLayout({ children }) {
             <html lang="th">
             <body className={`${geistSans.variable} ${geistMono.variable} ${mitr.variable} antialiased`}>
             <div className="flex flex-col min-h-screen">
-                <Navbar />
-                <CommonAlert />
+                <Navbar/>
+                <CommonAlert/>
                 <div className="flex-grow pt-0"> {/* Ensure no overlap between navbar and content */}
                     <main>{children}</main>
                 </div>
-                <Footer />
+                <Footer/>
             </div>
             </body>
             </html>
