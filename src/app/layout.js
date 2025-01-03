@@ -1,9 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Mitr } from "next/font/google"; // Import Mitr font
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import CommonAlert from "@/app/components/commonAlert";
 
+// Importing fonts
 const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
@@ -14,30 +16,35 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
 });
 
+// Import Mitr font with specified weight
+const mitr = Mitr({
+    variable: "--font-mitr",
+    subsets: ["latin", "thai"],
+    weight: "400", // You can change this to another weight like "300", "500", etc. if needed
+});
+
 export const metadata = {
     title: "CityRoad",
-    description: "A solution for community to update real-time transport status.",
+    description: "A solution for the community to update real-time transport status.",
     author: "Phongsiri Loedphongthai",
 };
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
-        <head>
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link
-                href={`https://fonts.googleapis.com/css2?family=${geistSans.style.fontFamily}&family=${geistMono.style.fontFamily}&display=swap`}
-                rel="stylesheet"
-            />
-        </head>
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar />
-        <div className="h-16" />
-        <CommonAlert />
-        <main>{children}</main>
-        <Footer />
-        </body>
-        </html>
+        <>
+            {/* Manually define <html> and <body> */}
+            <html lang="th">
+            <body className={`${geistSans.variable} ${geistMono.variable} ${mitr.variable} antialiased`}>
+            <div className="flex flex-col min-h-screen">
+                <Navbar />
+                <CommonAlert />
+                <div className="flex-grow pt-0"> {/* Ensure no overlap between navbar and content */}
+                    <main>{children}</main>
+                </div>
+                <Footer />
+            </div>
+            </body>
+            </html>
+        </>
     );
 }

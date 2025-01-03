@@ -9,7 +9,7 @@ const Footer = () => {
               </div>
               <div className="text-sm mt-8">
                   <p>
-                      Disclaimer: CityRoad is a web-app for community to update their real-time status for transportation. Some data may inaccurate.
+                      การรายงานข้อมูลมาจากภาคประชาชน อาจมีการผิดพลาดของข้อมูลได้
                   </p>
                   <br/>
                   <p>

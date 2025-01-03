@@ -6,79 +6,113 @@ const srtet = "/logo/srtet.png";
 const srt = "/logo/srt.png";
 const cp_exboat = "/logo/cp_exboat.png";
 const bus = "/logo/bus.png";
+const exat = "/logo/exat.png";
+const hwy = "/logo/hwy.png";
 
 const logo = {
-    'BTS SkyTrain': { src: btsSkyTrain, width: 50, height: 50 },
-    'Mass Rapid Transit': { src: mrta, width: 50, height: 50 },
-    'SRTET': { src: srtet, width: 50, height: 50 },
-    'State Railway of Thailand': { src: srt, width: 50, height: 50 },
-    'Chao Phraya Express Boat': { src: cp_exboat, width: 50, height: 50 },
-    'Bus Services': { src: bus, width: 50, height: 50 },
+    'ระบบรถไฟฟ้าขนส่งมวลชนกรุงเทพ (BTS)': { src: btsSkyTrain, width: 50, height: 50 },
+    'การรถไฟฟ้าขนส่งมวลชนแห่งประเทศไทย': { src: mrta, width: 50, height: 50 },
+    'รถไฟฟ้า รฟท.': { src: srtet, width: 50, height: 50 },
+    'การรถไฟแห่งประเทศไทย': { src: srt, width: 50, height: 50 },
+    'เรือด่วนเจ้าพระยา': { src: cp_exboat, width: 50, height: 50 },
+    'รถเมล์สายต่างๆ': { src: bus, width: 50, height: 50 },
+    'ทางด่วนในกรุงเทพมหานคร': {src: exat, width: 50, height: 50 },
+    'ทางหลวงชนบท': {src: hwy, width: 50, height: 50 },
 };
 
 const statusData = [
     {
-        title: 'BTS SkyTrain',
-        upvotes: 123, // Example upvote count
+        title: 'ระบบรถไฟฟ้าขนส่งมวลชนกรุงเทพ (BTS)',
+        upvotes: 0, // Example upvote count
         items: [
-            { label: 'Sukhumvit Line', status: 'Normal' },
-            { label: 'Silom Line', status: 'Normal' },
-            { label: 'Gold Line', status: 'Normal' },
-            { label: 'Yellow Line', status: 'Normal' },
-            { label: 'Pink Line', status: 'Normal' },
+            { label: 'สายสุขุมวิท', status: 'ปกติ' },
+            { label: 'สายสีลม', status: 'ปกติ' },
+            { label: 'สายสีทอง', status: 'ปกติ' },
+            { label: 'สายสีเหลือง', status: 'ปกติ' },
+            { label: 'สายสีชมพู', status: 'ปกติ' },
         ],
     },
     {
-        title: 'Mass Rapid Transit',
-        upvotes: 98,
+        title: 'การรถไฟฟ้าขนส่งมวลชนแห่งประเทศไทย',
+        upvotes: 0,
         items: [
-            { label: 'Blue Line', status: 'Normal' },
-            { label: 'Purple Line', status: 'Normal' },
-            { label: 'Orange Line', status: 'Closed' },
+            { label: 'สายสีน้ำเงิน', status: 'ปกติ' },
+            { label: 'สายสีม่วง', status: 'ปกติ' },
+            { label: 'สายสีส้ม', status: 'ปิดให้บริการ' },
         ],
     },
     {
-        title: 'SRTET',
-        upvotes: 45,
+        title: 'รถไฟฟ้า รฟท.',
+        upvotes: 0,
         items: [
-            { label: 'Dark Red Line', status: 'Normal' },
-            { label: 'Light Red Line', status: 'Normal' },
-            { label: 'Suvarnabhumi Airport Rail Link', status: 'Crowded' },
+            { label: 'สายสีแดง (รังสิต-บางซื่อ)', status: 'ปกติ' },
+            { label: 'สายสีแดง (ตลิ่งชัน-บางซื่อ)', status: 'ปกติ' },
+            { label: 'รถไฟฟ้าเชื่อมต่อท่าอากาศยานสุวรรณภูมิ', status: 'หนาแน่น' },
         ],
     },
     {
-        title: 'State Railway of Thailand',
-        upvotes: 67,
+        title: 'การรถไฟแห่งประเทศไทย',
+        upvotes: 0,
         items: [
-            { label: 'Northern Line', status: 'Normal' },
-            { label: 'Northeastern Line', status: 'Normal' },
-            { label: 'Eastern Line', status: 'Normal' },
-            { label: 'Southern Line', status: 'Normal' },
-            { label: 'Wong Wian Yai - Maha Chai Line', status: 'Normal' },
-            { label: 'Maha Chai - Maekhlong Line', status: 'Normal' },
+            { label: 'สายเหนือ', status: 'ปกติ' },
+            { label: 'สายตะวันออกเฉียงเหนือ', status: 'ปกติ' },
+            { label: 'สายตะวันออก', status: 'ปกติ' },
+            { label: 'สายใต้', status: 'ปกติ' },
+            { label: 'สายวงเวียนใหญ่-มหาชัย', status: 'ปกติ' },
+            { label: 'สายมหาชัย-แม่กลอง', status: 'ปกติ' },
         ],
     },
     {
-        title: 'Chao Phraya Express Boat',
-        upvotes: 32,
+        title: 'เรือด่วนเจ้าพระยา',
+        upvotes: 0,
         items: [
-            { label: 'Orange Flag', status: 'Normal' },
-            { label: 'Yellow Flag', status: 'Normal' },
-            { label: 'Yellow-Green Flag', status: 'Normal' },
-            { label: 'Gold Flag', status: 'Normal' },
-            { label: 'Red Flag', status: 'Normal' },
-            { label: 'Blue Flag (Tourist Boat)', status: 'Crowded' },
+            { label: 'ธงส้ม', status: 'ปกติ' },
+            { label: 'ธงเหลือง', status: 'ปกติ' },
+            { label: 'ธงเขียวเหลือง', status: 'ปกติ' },
+            { label: 'ธงทอง', status: 'ปกติ' },
+            { label: 'ธงแดง', status: 'ปกติ' },
+            { label: 'ธงฟ้า (เรือท่องเที่ยว)', status: 'หนาแน่น' },
+            { label: 'ไทยสมายล์โบ้ท', status: 'หนาแน่น' },
         ],
     },
     {
-        title: 'Bus Services',
-        upvotes: 29,
+        title: 'รถเมล์สายต่างๆ',
+        upvotes: 0,
         items: [
-            { label: 'Bangkok BRT', status: 'Normal' },
-            { label: 'BMTA Bus', status: 'Normal' },
-            { label: 'Thai Smile Bus', status: 'Normal' },
-            { label: 'Songtaew', status: 'Normal' },
-            { label: 'Thai Smile Boat', status: 'Crowded' },
+            { label: 'รถโดยสารด่วนพิเศษ BRT', status: 'ปกติ' },
+            { label: 'รถเมล์ ขสมก.', status: 'ปกติ' },
+            { label: 'ไทยสมายล์บัส', status: 'ปกติ' },
+            { label: 'รถสองแถว', status: 'ปกติ' },
+        ],
+    },
+    {
+        title: 'ทางด่วนในกรุงเทพมหานคร',
+        upvotes: 0,
+        items: [
+            { label: 'เฉลิมมหานคร', status: 'ปกติ' },
+            { label: 'ศรีรัช', status: 'ปกติ' },
+            { label: 'ฉลองรัช', status: 'รถติด' },
+            { label: 'บูรพาวิถี', status: 'รถติด' },
+            { label: 'ทางพิเศษสาย S1', status: 'รถติด' },
+            { label: 'กาญจนาภิเษก (ฝั่งใต้)', status: 'รถติด' },
+            { label: 'อุดรรัถยา', status: 'รถติด' },
+            { label: 'ประจิมรัถยา', status: 'รถติด' },
+            { label: 'ดอนเมืองโทลล์เวย์', status: 'ปกติ' },
+        ],
+    },
+    {
+        title: 'ทางหลวงชนบท',
+        upvotes: 0,
+        items: [
+            { label: 'ถนน พหลโยธิน', status: 'ปกติ' },
+            { label: 'ถนน มิตรภาพ', status: 'ปกติ' },
+            { label: 'ถนน สุขุมวิท', status: 'รถติด' },
+            { label: 'ถนน เพชรเกษม', status: 'รถติด' },
+            { label: 'มอเตอร์เวย์ สาย M5', status: 'ปิดให้บริการ' },
+            { label: 'มอเตอร์เวย์ สาย M6', status: 'รถติด' },
+            { label: 'มอเตอร์เวย์ สาย M7 (กรุงเทพ-ชลบุรี)', status: 'รถติด' },
+            { label: 'มอเตอร์เวย์ สาย M8', status: 'ปิดให้บริการ' },
+            { label: 'มอเตอร์เวย์ สาย M9 (กาญจนาภิเษก)', status: 'ปกติ' },
         ],
     },
 ];
@@ -117,9 +151,9 @@ function Status() {
                                 </div>
                                 <span
                                     className={`px-2 py-1 rounded-sm ${
-                                        item.status === 'Closed'
+                                        item.status === 'ปิดให้บริการ'
                                             ? 'bg-error text-error-content'
-                                            : item.status === 'Crowded'
+                                            : item.status === 'หนาแน่น' || item.status === 'รถติด'
                                                 ? 'bg-warning text-warning-content'
                                                 : 'bg-success text-success-content'
                                     }`}
@@ -130,7 +164,11 @@ function Status() {
                         ))}
                     </ul>
                     <div className="absolute bottom-2 right-2 text-sm text-gray-500"> {/* Adjusted for cleaner layout */}
-                        {section.upvotes} upvotes
+                        {section.upvotes === 0
+                            ? "ไม่มีการโหวต"
+                            : section.upvotes === 1
+                                ? "1 โหวต"
+                                : `${section.upvotes} โหวต`}
                     </div>
                 </div>
             ))}

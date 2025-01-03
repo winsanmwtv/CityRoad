@@ -4,7 +4,7 @@ import ContentWidth from "./contentWidth";
 
 export default function Navbar() {
     return (
-        <nav className="bg-primary fixed w-full z-50"> {/* Added z-50 */}
+        <nav className="bg-primary sticky top-0 w-full z-50">
             <ContentWidth>
                 <Link href="/" title="Home Page">
                     <Image
@@ -17,5 +17,6 @@ export default function Navbar() {
                 </Link>
             </ContentWidth>
         </nav>
+
     );
 }
