@@ -119,38 +119,40 @@ const statusData = [
 
 function Status() {
     return (
-        <div className="grid grid-cols-4 gap-2 bg-base-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-base-200">
             {statusData.map((section) => (
-                <div key={section.title} className="bg-base-100 p-4 rounded relative pb-8"> {/* Added padding-bottom */}
+                <div key={section.title} className="bg-base-100 p-4 rounded relative pb-8">
+                    {/* Title and Logo */}
                     <div className="flex items-center mb-2">
                         {logo[section.title] && (
                             <Image
-                                className=""
-                                src={logo[section.title]}
+                                className="mr-2"
+                                src={logo[section.title].src}
                                 alt={section.title}
-                                width={50}
-                                height={50}
+                                width={40} // Reduced size for mobile
+                                height={40} // Reduced size for mobile
                             />
                         )}
-                        <h3 className="text-lg font-semibold">{section.title}</h3>
+                        <h3 className="text-sm sm:text-lg font-semibold">{section.title}</h3>
                     </div>
+                    {/* Items List */}
                     <ul className="list-none">
                         {section.items.map((item) => (
                             <li key={item.label} className="flex items-center justify-between mb-1">
                                 <div className="flex items-center">
                                     {logo[item.label] && (
                                         <Image
-                                            className=""
-                                            src={logo[item.label]}
+                                            className="mr-2"
+                                            src={logo[item.label].src}
                                             alt={item.label}
-                                            width={50}
-                                            height={50}
+                                            width={40} // Reduced size for mobile
+                                            height={40} // Reduced size for mobile
                                         />
                                     )}
-                                    <span className="mr-2">{item.label}</span>
+                                    <span className="text-xs sm:text-sm">{item.label}</span>
                                 </div>
                                 <span
-                                    className={`px-2 py-1 rounded-sm ${
+                                    className={`px-2 py-1 text-xs sm:text-sm rounded-sm ${
                                         item.status === 'ปิดให้บริการ'
                                             ? 'bg-error text-error-content'
                                             : item.status === 'หนาแน่น' || item.status === 'รถติด'
@@ -163,7 +165,8 @@ function Status() {
                             </li>
                         ))}
                     </ul>
-                    <div className="absolute bottom-2 right-2 text-sm text-gray-500"> {/* Adjusted for cleaner layout */}
+                    {/* Upvotes */}
+                    <div className="absolute bottom-2 right-2 text-xs sm:text-sm text-gray-500">
                         {section.upvotes === 0
                             ? "ไม่มีการโหวต"
                             : section.upvotes === 1
@@ -175,6 +178,5 @@ function Status() {
         </div>
     );
 }
-
 
 export default Status;
