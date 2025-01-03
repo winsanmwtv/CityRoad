@@ -10,8 +10,8 @@ const exat = "/logo/exat.png";
 const hwy = "/logo/hwy.png";
 
 const logo = {
-    'ระบบรถไฟฟ้าขนส่งมวลชนกรุงเทพ (BTS)': { src: btsSkyTrain, width: 50, height: 50 },
-    'การรถไฟฟ้าขนส่งมวลชนแห่งประเทศไทย': { src: mrta, width: 50, height: 50 },
+    'ระบบรถไฟฟ้า BTS': { src: btsSkyTrain, width: 50, height: 50 },
+    'รถไฟฟ้ามหานคร': { src: mrta, width: 50, height: 50 },
     'รถไฟฟ้า รฟท.': { src: srtet, width: 50, height: 50 },
     'การรถไฟแห่งประเทศไทย': { src: srt, width: 50, height: 50 },
     'เรือด่วนเจ้าพระยา': { src: cp_exboat, width: 50, height: 50 },
@@ -22,7 +22,7 @@ const logo = {
 
 const statusData = [
     {
-        title: 'ระบบรถไฟฟ้าขนส่งมวลชนกรุงเทพ (BTS)',
+        title: 'ระบบรถไฟฟ้า BTS',
         upvotes: 0, // Example upvote count
         items: [
             { label: 'สายสุขุมวิท', status: 'ปกติ' },
@@ -33,7 +33,7 @@ const statusData = [
         ],
     },
     {
-        title: 'การรถไฟฟ้าขนส่งมวลชนแห่งประเทศไทย',
+        title: 'รถไฟฟ้ามหานคร',
         upvotes: 0,
         items: [
             { label: 'สายสีน้ำเงิน', status: 'ปกติ' },
@@ -47,7 +47,7 @@ const statusData = [
         items: [
             { label: 'สายสีแดง (รังสิต-บางซื่อ)', status: 'ปกติ' },
             { label: 'สายสีแดง (ตลิ่งชัน-บางซื่อ)', status: 'ปกติ' },
-            { label: 'รถไฟฟ้าเชื่อมต่อท่าอากาศยานสุวรรณภูมิ', status: 'หนาแน่น' },
+            { label: 'แอร์พอร์ต เรล ลิงก์', status: 'หนาแน่น' },
         ],
     },
     {
