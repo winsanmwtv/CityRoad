@@ -30,20 +30,20 @@ export default function CommonAlert() {
 
     return (
         <div className="bg-warning text-warning-content p-4 flex flex-col sm:flex-row sm:items-center justify-start sm:justify-start">
-            {/* Alert Icon */}
-            <div className="mr-4 mt-0 mb-3 sm:mb-0 sm:mr-4">
+            {/* Alert Icon (Left-aligned on mobile, otherwise on top) */}
+            <div className="mr-4 mt-0 mb-3 sm:mb-0 sm:mr-4 sm:mr-0 sm:mt-0 order-1 sm:order-none">
                 <Image
                     src="/warning.png"
                     alt="Alert Icon"
-                    width={24} // Adjusted size
-                    height={24} // Adjusted size
-                    className="w-auto h-auto"
+                    width={24} // Adjusted size for mobile
+                    height={24} // Adjusted size for mobile
+                    className="w-6 h-6 sm:w-8 sm:h-8" // Smaller on mobile, larger on desktop
                 />
             </div>
-            {/* Alert Text */}
-            <div className="flex flex-col items-start sm:items-start">
+            {/* Alert Text (Right-aligned on mobile, otherwise on left) */}
+            <div className="flex flex-col items-start sm:items-start sm:text-left order-0 sm:order-none sm:ml-4">
                 <div className="mt-1">
-                    <h3 className="text-sm sm:text-lg mb-1 text-left"> {/* Left-align on all screens */}
+                    <h3 className="text-sm sm:text-lg mb-1 text-left sm:text-left"> {/* Left-align on all screens */}
                         ข่าวล่าสุด: {alertText[currentAlert]}{" "}
                         <span className="text-xs sm:text-sm text-gray-700 ml-3">
                             [{currentAlert + 1}/{alertText.length}]
