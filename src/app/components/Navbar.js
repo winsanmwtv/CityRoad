@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ContentWidth from "./contentWidth";
-import cityRailLogo from "@/cityrail.svg"
+import cityRailLogo from "./cityrail.svg";
 
 export default function Navbar() {
     return (
@@ -11,7 +11,7 @@ export default function Navbar() {
                     <Image
                         className="invert"
                         src={cityRailLogo}
-                        alt="Limaru Logo"
+                        alt="CityRoad Logo"
                         width={100}
                         height={100}
                     />
