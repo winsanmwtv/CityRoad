@@ -1,8 +1,11 @@
 import React from 'react';
 import Image from "next/image";
+import btsSkyTrain from "./logo/bts_skytrain.png";
+import mrta from "./logo/mrta.png";
 
 const logo = {
-    'BTS SkyTrain': "./logo/bts_skytrain.png",
+    'BTS SkyTrain': {btsSkyTrain},
+    'Mass Rapid Transit': {mrta},
 };
 
 const statusData = [
@@ -73,10 +76,12 @@ function Status() {
                 <div key={section.title} className="bg-base-100 p-4 rounded">
                     <div className="flex items-center mb-2">
                         {logo[section.title] && (
-                            <img
+                            <Image
+                                className=""
                                 src={logo[section.title]}
                                 alt={section.title}
-                                className="w-8 h-8 mr-2"
+                                width={50}
+                                height={50}
                             />
                         )}
                         <h3 className="text-lg font-semibold">{section.title}</h3>
@@ -85,17 +90,16 @@ function Status() {
                         {section.items.map((item) => (
                             <li key={item.label} className="flex items-center justify-between mb-1">
                                 <div className="flex items-center">
-                                    {logo[item.label] ? (
+                                    {logo[item.label] && ( // Check for logo at item level
                                         <Image
+                                            className=""
                                             src={logo[item.label]}
                                             alt={item.label}
-                                            className=""
-                                            width = {100}
-                                            height = {100}
+                                            width={50}
+                                            height={50}
                                         />
-                                    ) : (
-                                        <span className="mr-2">{item.label}</span>
                                     )}
+                                    <span className="mr-2">{item.label}</span>
                                 </div>
                                 <span
                                     className={`px-2 py-1 rounded-sm ${
@@ -106,8 +110,8 @@ function Status() {
                                                 : 'bg-success text-success-content'
                                     }`}
                                 >
-                  {item.status}
-                </span>
+                                    {item.status}
+                                </span>
                             </li>
                         ))}
                     </ul>
