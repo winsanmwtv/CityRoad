@@ -29,9 +29,9 @@ export default function CommonAlert() {
     }
 
     return (
-        <div className="bg-warning text-warning-content p-4 flex flex-col sm:flex-row sm:items-center justify-start sm:justify-start">
-            {/* Alert Icon (Left-aligned on mobile, on the left of text for all screen sizes) */}
-            <div className="mr-4 mt-0 mb-3 sm:mb-0 sm:mr-4 sm:mr-0 sm:mt-0 order-1 sm:order-none">
+        <div className="bg-warning text-warning-content p-4 flex sm:flex-row sm:items-center justify-start flex-col">
+            {/* Alert Icon (Stay on left side of text on both mobile and desktop) */}
+            <div className="mr-4 mt-0 mb-3 sm:mb-0 sm:mr-4">
                 <Image
                     src="/warning.png"
                     alt="Alert Icon"
@@ -40,8 +40,8 @@ export default function CommonAlert() {
                     className="w-6 h-6 sm:w-8 sm:h-8" // Smaller on mobile, larger on desktop
                 />
             </div>
-            {/* Alert Text (Text right of logo on mobile, remains left-aligned) */}
-            <div className="flex flex-col items-start sm:items-start sm:text-left order-0 sm:order-none sm:ml-4">
+            {/* Alert Text (Text should stay to the right of logo on both mobile and desktop) */}
+            <div className="flex flex-col items-start sm:items-start sm:text-left">
                 <div className="mt-1">
                     <h3 className="text-sm sm:text-lg mb-1 text-left sm:text-left"> {/* Left-align on all screens */}
                         ข่าวล่าสุด: {alertText[currentAlert]}{" "}
