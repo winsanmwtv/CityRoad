@@ -29,17 +29,18 @@ export default function CommonAlert() {
     }
 
     return (
-        <div className="bg-warning text-warning-content p-4 flex items-center">
+        <div className="bg-warning text-warning-content p-4 flex items-center justify-between">
+            {/* Alert Icon */}
             <div className="mr-4 mt-0 -mb-5">
-                <div className="ml-12 mr-0 mb-5">
-                    <Image
-                        src="/warning.png"
-                        alt="Alert Icon"
-                        width={40}
-                        height={40}
-                    />
-                </div>
+                <Image
+                    src="/warning.png"
+                    alt="Alert Icon"
+                    width={40}
+                    height={40}
+                    className="block w-auto h-auto" // Ensure image fits the container
+                />
             </div>
+            {/* Alert Text */}
             <div className="flex flex-col items-start">
                 <div className="mt-1">
                     <h3 className="text-lg mb-1">
