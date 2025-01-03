@@ -1,8 +1,9 @@
-export default function Loading() {
+export default function NotFound() {
     return (
-        <div className="bg-base-100 text-base-content flex items-center justify-center min-h-screen px-4">
+        <div className="bg-accent text-accent-content flex items-center justify-center min-h-screen px-4">
             <div className="text-center">
-                <h1 className="text-2xl sm:text-4xl font-bold">เว็บไซต์กำลังโหลด กรุณารอสักครู่</h1>
+                <h1 className="text-3xl sm:text-4xl font-bold">404 | Page not found</h1>
+                <p className="mt-2 text-base sm:text-lg">Is there any mistake in the URL?</p>
             </div>
         </div>
     );
